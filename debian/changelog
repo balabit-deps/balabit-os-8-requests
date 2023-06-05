@@ -1,3 +1,13 @@
+requests (2.22.0-2ubuntu1.1) focal-security; urgency=medium
+
+  * SECURITY UPDATE: Unintended leak of Proxy-Authorization header
+    - debian/patches/CVE-2023-32681.patch: don't attach header to redirects
+      with an HTTPS destination in requests/sessions.py,
+      tests/test_requests.py.
+    - CVE-2023-32681
+
+ -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Mon, 05 Jun 2023 13:13:31 -0400
+
 requests (2.22.0-2ubuntu1) focal; urgency=medium
 
   * Drop python2 support, cherry-picked from Debian.
